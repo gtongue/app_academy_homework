@@ -4,33 +4,33 @@ class Array
         return self if self.length == 1
         return [] if self.length == 0
         prc ||= Proc.new {|a,b| a <=> b}    
-    
+
         half = self.length / 2
-    
+
         left = self.dup[0...half].merge_sort(&prc)
         right = self.dup[half..-1].merge_sort(&prc)
-    
+
         Array.merge(left, right, &prc)
-      end
+    end
     
-      def self.merge(left, right, &prc)
-        merged = []
-        until left.empty? || right.empty?
-          res = prc.call(left, right)
-          if res == -1
-            merged << left.shift
-          elsif res == 1
-            merged << right.shift
-          else
-            merged << left.shift
-            merged << right.shift
-          end
+    def self.merge(left, right, &prc)
+    merged = []
+    until left.empty? || right.empty?
+        res = prc.call(left, right)
+        if res == -1
+        merged << left.shift
+        elsif res == 1
+        merged << right.shift
+        else
+        merged << left.shift
+        merged << right.shift
         end
-    
-        merged.concat(left)
-        merged.concat(right)
-        merged
-      end    
+    end
+
+    merged.concat(left)
+    merged.concat(right)
+    merged
+    end    
 end
 
 def sluggish_octopus(arr)
@@ -75,3 +75,5 @@ TILES_HASH = {"up" => 0, "right-up" => 1, "right" => 2, "right-down" => 3, "down
 def constant_dance(direction, tiles_hash = TILES_HASH)
     tiles_hash[direction]
 end
+
+sluggish_octopus(["fish"])
