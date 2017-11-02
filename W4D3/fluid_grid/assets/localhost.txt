@@ -1,0 +1,12 @@
+Puma caught this error: undefined local variable or method `inital' for #<Session:0x007fca44993c50>
+Did you mean?  initial (NameError)
+/Users/garretttongue/Documents/Merging/App Academy Classwork/W5D3/lib/session.rb:8:in `initialize'
+/Users/garretttongue/Documents/Merging/App Academy Classwork/W5D3/lib/controller_base.rb:50:in `new'
+/Users/garretttongue/Documents/Merging/App Academy Classwork/W5D3/lib/controller_base.rb:50:in `session'
+bin/p04_session_server.rb:6:in `go'
+bin/p04_session_server.rb:15:in `block in <main>'
+/Library/Ruby/Gems/2.3.0/gems/puma-3.10.0/lib/puma/configuration.rb:225:in `call'
+/Library/Ruby/Gems/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:605:in `handle_request'
+/Library/Ruby/Gems/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:437:in `process_client'
+/Library/Ruby/Gems/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:301:in `block in run'
+/Library/Ruby/Gems/2.3.0/gems/puma-3.10.0/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
